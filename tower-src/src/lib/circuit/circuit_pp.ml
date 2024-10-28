@@ -36,8 +36,8 @@ let show_modul (m : Circuit.modul) =
     "module %s:\nheap pointer: [%s]\nargs: [%s]\noutput: [%s]\n%s"
     (Symbol.name m.name)
     (List.map ~f:Int.to_string m.hp |> String.concat ~sep:", ")
-    (List.map ~f:Int.to_string m.out_args |> String.concat ~sep:", ")
     (List.map ~f:Int.to_string m.args |> String.concat ~sep:", ")
+    (List.map ~f:Int.to_string m.out_args |> String.concat ~sep:", ")
     (String.concat ~sep:"\n" (indent (List.concat_map ~f:show_gate m.body)))
 ;;
 

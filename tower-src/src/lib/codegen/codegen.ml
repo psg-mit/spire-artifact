@@ -294,5 +294,5 @@ let lower_module (m : Circuit.modul) ~num_cells =
     Gates.concat
       [ c; Gates.concat @@ List.map ~f:(lower_gate a ~mem ~cell_size:m.cell_size) m.body ]
   in
-  { name = m.name; hp = m.hp; mem; out_args = m.out_args; args = m.out_args; body }
+  { name = m.name; hp = m.hp; mem; out_args = m.out_args; args = m.args; body }
 ;;
